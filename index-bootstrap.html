@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bootstrap</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+    <style>
+      .scale{
+        transition: scale 500ms ease-in-out;
+      }
+      .scale:hover{
+        z-index: 100;
+        transform: scale(1.4);
+      }
+      .rotate{
+        transition: transform 700ms ease-in-out;
+      }
+      .rotate:hover{
+        transform: rotate(360deg);
+      }
+      .party:hover{
+        animation: party 900ms infinite ;
+      }
+      @keyframes party {
+        0%{
+          background-color: aqua;
+          color: white;
+        }
+        20%{
+          background-color: rgb(207, 50, 14);
+          color: rgb(10, 157, 66);
+        }
+        40%{
+          background-color: hsl(230, 89%, 44%);
+          color: rgb(201, 218, 12);
+        }
+        60%{
+          background-color: rgb(19, 201, 53);
+          color: rgb(12, 177, 214);
+        }
+        80%{
+          background-color: rgb(175, 17, 223);
+          color: rgb(220, 207, 223);
+        }
+        100%{
+          background-color: rgb(231, 235, 14);
+            color: rgb(22, 161, 6);
+        }
+        
+      }
+    </style>
+</head>
+<body>
+  <div class="container mt-5 ">
+    <div class="row" style="height: 30vh;">
+      <div class="row">
+        <p class="h1 text-primary text-center border p-2 mb-5">The use of transition and transform to make the cards do weird things</p>
+      </div>
+      <div class="d-flex justify-content-around">
+      <div class="col-3">
+        <div class="card rounded scale">
+          <div class="card-header">
+            <p>Scale transformation</p>
+          </div>
+          <div class="card-body">
+            When hovered on I scale up animation-wise
+          </div>
+          <div class="card-footer ">
+            <p class="blockquote-footer pt-5 ">Hover on me</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card rotate">
+          <div class="card-header">
+            Rotate me
+          </div>
+          <div class="card-body">
+            Hover me to see me rotate
+          </div>
+          <div class="card-footer">
+            Rotate
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card party">
+          <div class="card-header">
+            Trigger party mode
+          </div>
+          <div class="card-body">
+            Hover on me to see party mode
+          </div>
+          <div class="card-footer">
+            Party!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
